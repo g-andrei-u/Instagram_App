@@ -1,0 +1,16 @@
+.App {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 15% 55% 30%;
+}
+
+#side-bar {
+  grid-column: 1/2;
+  height: 100vh;
+}
+
+#right-top {
+  grid-column: 3/4;
+  margin-top: 5vh;
+  margin-right: 30%;
+}
