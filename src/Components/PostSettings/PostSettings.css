@@ -1,0 +1,23 @@
+#settings {
+    position: fixed;
+    top: 20vh;
+    left: 35%;
+    z-index: 10;
+    background-color: white;
+    text-align: center;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 13px;
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+#settings p {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#settings p:hover {
+    cursor: pointer;
+}

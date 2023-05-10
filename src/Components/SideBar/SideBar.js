@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import AnchorImage from "../AnchorImage/AnchorImage";
+import MorePopUp from "../MorePopUp/MorePopUp";
 
 import Image1 from '../Pictures/Instagram_logo.svg.png';
 import Image2 from '../Pictures/chimney-home-icon-transparent-1.png';
@@ -9,20 +10,22 @@ import Image5 from '../Pictures/instagram-reels-icon.png';
 import Image6 from '../Pictures/messeges.png';
 import Image7 from '../Pictures/heart-shaped-instagram-transparent-image.png';
 import Image8 from '../Pictures/square-with-plus-sign-icon.png';
-import Image9 from '../Pictures/more.png'
+import Image9 from '../Pictures/more.png';
+import ProfilePic from '../Pictures/tom-face-sticker-india.png';
 
 import './SideBar.css';
 
 
-const hideStyle = {
-    display: 'none'
+const profileStyle = {
+    borderRadius: '50%'
 };
 
 
-function Sidebar() {
-
+function Sidebar(props) {
     return (
-    <div id="side-bar">
+    <>
+    <MorePopUp status={props.morePopUp} />
+    <div id="side-bar" onClick={props.handleOnExit}>
         <div id="start-part">
             <a>
                 <img src={Image1} style={{width: 115, marginTop: 30, padding: 6}} />
@@ -36,12 +39,13 @@ function Sidebar() {
             <AnchorImage img={Image6}><p>Messages</p></AnchorImage>
             <AnchorImage img={Image7}><p>Notifications</p></AnchorImage>
             <AnchorImage img={Image8}><p>Create</p></AnchorImage>
-            <AnchorImage img={'w'}><p>Profile</p></AnchorImage>
+            <AnchorImage img={ProfilePic}><p>Profile</p></AnchorImage>
         </div>
         <div id="last-part">
-            <AnchorImage img={Image9}><p>More</p></AnchorImage>
+            <AnchorImage onClick={props.handleOnMoreOpen} img={Image9}><p>More</p></AnchorImage>
         </div>
-    </div>);
+    </div>
+    </>);
 };
 
 

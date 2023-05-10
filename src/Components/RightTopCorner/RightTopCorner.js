@@ -45,11 +45,13 @@ const normalImageStyle = {
     border: '1px solid rgba(82, 82, 82, 0.5)'
 };
 
-function RightTopCorner() {
+function RightTopCorner(props) {
+
     const [fallowButton1, setFallowButton1] = useState('Follow');
     const [fallowButton2, setFallowButton2] = useState('Follow');
     const [fallowButton3, setFallowButton3] = useState('Follow');
     const [fallowButton4, setFallowButton4] = useState('Follow');
+
 
     const handleOnClick1 = () => {
 
@@ -98,7 +100,7 @@ function RightTopCorner() {
 
 
     return(
-    <div id='right-top'>
+    <div onClick={props.handleOnExit} id='right-top'>
         <section id='first-section'>
             <div className="account"> 
                 <div className="inner-account">

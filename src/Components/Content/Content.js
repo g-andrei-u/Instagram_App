@@ -7,10 +7,16 @@ import Image20 from '../Pictures/lola__selfie_by_super_cartoonist.png';
 import Image21 from '../Pictures/lola-bunny.png'
 
 
-function Content() {
+function Content(props) {
     return (
         <div id="content">
-            <Post mainImg={Image20} smallImg={Image21} />
+            <Post 
+            update={props.update}
+            handleOnExit={props.handleOnExit} 
+            handleOnPress={props.handleOnPress} 
+            mainImg={Image20} 
+            smallImg={Image21} 
+            />
         </div>
     )
 };

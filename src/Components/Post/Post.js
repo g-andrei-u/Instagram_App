@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-
-import './Post.css';
+import PostSettings from "../PostSettings/PostSettings";
 
 import NormalHeart from '../Pictures/heart-shaped-instagram-transparent-image.png'
 import HeartImageRed from '../Pictures/heart-logo-red-transparent.png';
 import ShareImage from '../Pictures/messeges.png';
 import InstaCommentImage from '../Pictures/insta-comment.png';
 import SavedImage from '../Pictures/saved.png';
+
+import './Post.css';
+
 
 const timeStyle = {
 
@@ -58,14 +60,16 @@ function Post(props) {
 
 
     return (
-        <div id="post">
+        <>
+        <PostSettings update={props.update} />
+        <div onClick={props.handleOnExit} id="post">
             <section id="first-bar">
                 <div id="inner-bar">
                     <img id="small-image" src={props.smallImg} />
                     <p>UserName</p>
                     <p style={timeStyle}>5h</p>
                 </div>
-                <button>...</button>
+                <button onClick={props.handleOnPress}>...</button>
             </section>
 
             <section style={{display: 'flex', justifyContent: 'center'}}>
@@ -87,6 +91,7 @@ function Post(props) {
                 <p style={commentsStyle}>Add a comment...</p>
             </section>
         </div>
+        </>
     )
 };
 
