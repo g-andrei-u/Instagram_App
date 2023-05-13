@@ -19,7 +19,7 @@ const timeStyle = {
 function Post(props) {
 
     const [heartImage, setHeartImage] = useState(NormalHeart);
-    const [number, setNumber] = useState(100);
+    const [number, setNumber] = useState(props.likes);
 
 
     const handleOnHeartChange = () => {
@@ -39,10 +39,10 @@ function Post(props) {
 
 
     const widthHeartStyle = {
-        width: heartImage === HeartImageRed? '22px' : '34px',
-        marginBottom: heartImage === HeartImageRed? 5 : 0,
-        margintop: heartImage === HeartImageRed? 5 : 2,
-        marginRight: heartImage === HeartImageRed? 5 : 0,
+        width: heartImage === HeartImageRed? '25px' : '26px',
+        marginBottom: heartImage === HeartImageRed? 5 : 3,
+        marginTop: heartImage === HeartImageRed? 6 : 5,
+        marginRight: heartImage === HeartImageRed? 3 : 5,
         marginLeft: heartImage === HeartImageRed? 5 : 0,
         opacity: heartImage === HeartImageRed? 1 : '',
     };
@@ -55,7 +55,9 @@ function Post(props) {
     const commentsStyle = {
         color: 'rgba(0, 0, 0, 0.6)',
         fontWeight: '400',
-        fontSize: '14px'
+        fontSize: '14px',
+        marginBottom: 10,
+        marginTop: 8
     }
 
 
@@ -65,9 +67,9 @@ function Post(props) {
         <div onClick={props.handleOnExit} id="post">
             <section id="first-bar">
                 <div id="inner-bar">
-                    <img id="small-image" src={props.smallImg} />
-                    <p>UserName</p>
-                    <p style={timeStyle}>5h</p>
+                    <img id="small-image" src={props.profileImg} />
+                    <p>{props.name}</p>
+                    <p style={timeStyle}>{props.time}</p>
                 </div>
                 <button onClick={props.handleOnPress}>...</button>
             </section>
@@ -82,7 +84,7 @@ function Post(props) {
                     <img className="img-logo" style={{width: '32px', marginBottom: 0}} src={InstaCommentImage} />
                     <img className="img-logo" style={{width: '23px'}} src={ShareImage}/>
                 </div>
-                <img className="img-logo" style={{width: '60px', margin: -10}} src={SavedImage} />
+                <img className="img-logo" style={{width: '18px', height: '23px', margin: '8px 5px'}} src={SavedImage} />
             </section>
 
             <section>

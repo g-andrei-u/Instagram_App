@@ -13,6 +13,10 @@
     margin: 0;
 }
 
+.stories div:hover {
+    cursor: pointer;
+}
+
 .profile-pic {
     width: 55px;
     height: 55px;

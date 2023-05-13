@@ -16,8 +16,9 @@ import ProfilePic from '../Pictures/tom-face-sticker-india.png';
 import './SideBar.css';
 
 
-const profileStyle = {
-    borderRadius: '50%'
+const homeStyle = {
+    fontWeight: '800',
+    fontSize: '15px'
 };
 
 
@@ -28,11 +29,11 @@ function Sidebar(props) {
     <div id="side-bar" onClick={props.handleOnExit}>
         <div id="start-part">
             <a>
-                <img src={Image1} style={{width: 115, marginTop: 30, padding: 6}} />
+                <img src={Image1} style={{width: 115, marginTop: 30, padding: '6px 0'}} />
             </a>
         </div>
         <div id="mid-part">
-            <AnchorImage img={Image2}><p>Home</p></AnchorImage>
+            <AnchorImage img={Image2}><p style={homeStyle}>Home</p></AnchorImage>
             <AnchorImage img={Image3}><p>Search</p></AnchorImage>
             <AnchorImage img={Image4}><p>Explore</p></AnchorImage>
             <AnchorImage img={Image5}><p>Reels</p></AnchorImage>
