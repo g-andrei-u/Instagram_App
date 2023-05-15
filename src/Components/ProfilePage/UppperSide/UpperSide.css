@@ -1,0 +1,40 @@
+#UpperSide {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-right: 350px;
+    margin-left: 150px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.profile-picture {
+    width: 170px;
+    height: 170px;
+    padding: 5px;
+    border: 1px solid rgba(82, 82, 82, 0.5);
+    border-radius: 50%;
+}
+
+.first-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.first-line button {
+    background-color: rgb(232, 232, 232);
+    height: 35px;
+    width: 100px;
+    border: 0px;
+    border-radius: 10px;
+    font-family: 'inter';
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.settings-img {
+    width: 25px;
+    height: 25px;
+}

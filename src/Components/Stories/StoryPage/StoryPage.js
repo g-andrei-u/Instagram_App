@@ -1,11 +1,11 @@
 import React, {useState} from "react";
 
-import Insta from '../Pictures/instagram-white.png';
-import McDuck from '../Pictures/StoriesPage/McDuck.png';
-import ProfileMcDuck from '../Pictures/StoriesPictures/Scrooge-McDuck.png';
-import Heart from '../Pictures/heart-shaped-white-transparent.png';
-import RedHeart from '../Pictures/heart-logo-red-transparent.png';
-import Share from '../Pictures/messeges-white.png';
+import Insta from '../../Pictures/instagram-white.png';
+import McDuck from '../../Pictures/StoriesPage/McDuck.png';
+import ProfileMcDuck from '../../Pictures/StoriesPictures/Scrooge-McDuck.png';
+import Heart from '../../Pictures/heart-shaped-white-transparent.png';
+import RedHeart from '../../Pictures/heart-logo-red-transparent.png';
+import Share from '../../Pictures/messeges-white.png';
 
 import './StoryPage.css'
 

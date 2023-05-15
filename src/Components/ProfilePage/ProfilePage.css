@@ -1,0 +1,7 @@
+#profile-page {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50vh 1fr;
+}

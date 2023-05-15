@@ -55,47 +55,20 @@ function RightTopCorner(props) {
 
     const handleOnClick1 = () => {
 
-        if(fallowButton1 === 'Follow') {
-
-            setFallowButton1('Following')
-        }
-        else if(fallowButton1 === 'Following') {
-    
-            setFallowButton1( 'Follow')
-        }
+        fallowButton1 === 'Follow' ? setFallowButton1('Following') : setFallowButton1('Follow');
     }
     const handleOnClick2 = () => {
 
-        if(fallowButton2 === 'Follow') {
-    
-            setFallowButton2('Following')
-        }
-        else if(fallowButton2 === 'Following') {
-    
-            setFallowButton2( 'Follow')
-        }
+        fallowButton2 === 'Follow' ? setFallowButton2('Following') : setFallowButton2('Follow');
     }
+
     const handleOnClick3 = () => {
 
-        if(fallowButton3 === 'Follow') {
-    
-            setFallowButton3('Following')
-        }
-        else if(fallowButton3 === 'Following') {
-    
-            setFallowButton3( 'Follow')
-        }
+        fallowButton3 === 'Follow' ? setFallowButton3('Following') : setFallowButton3('Follow');
     }
     const handleOnClick4 = () => {
 
-        if(fallowButton4 === 'Follow') {
-    
-            setFallowButton4('Following')
-        }
-        else if(fallowButton4 === 'Following') {
-    
-            setFallowButton4( 'Follow')
-        }
+        fallowButton4 === 'Follow' ? setFallowButton4('Following') : setFallowButton4('Follow');
     };
 
 

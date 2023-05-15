@@ -1,10 +1,10 @@
 import React from "react";
 
-import Settings from '../Pictures/settings-icon.png';
-import Clock from '../Pictures/clock-transparent.png';
-import Saved from '../Pictures/saved.png';
-import Sun from '../Pictures/sun.png';
-import Report from '../Pictures/report-problem-caution.png';
+import Settings from '../../Pictures/settings-icon.png';
+import Clock from '../../Pictures/clock-transparent.png';
+import Saved from '../../Pictures/saved.png';
+import Sun from '../../Pictures/sun.png';
+import Report from '../../Pictures/report-problem-caution.png';
 
 import './MorePopUp.css';
 

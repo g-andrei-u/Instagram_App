@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import PostSettings from "../PostSettings/PostSettings";
+import PostSettings from "./PostSettings/PostSettings";
 
 import NormalHeart from '../Pictures/heart-shaped-instagram-transparent-image.png'
 import HeartImageRed from '../Pictures/heart-logo-red-transparent.png';
 import ShareImage from '../Pictures/messeges.png';
 import InstaCommentImage from '../Pictures/insta-comment.png';
-import SavedImage from '../Pictures/saved.png';
+import SavedImg from '../Pictures/saved.png';
+import SavedImageFull from '../Pictures/saved-full.png';
 
 import './Post.css';
 
@@ -19,6 +20,7 @@ const timeStyle = {
 function Post(props) {
 
     const [heartImage, setHeartImage] = useState(NormalHeart);
+    const [savedImage, setSavedImage] = useState(SavedImg);
     const [number, setNumber] = useState(props.likes);
 
 
@@ -34,6 +36,19 @@ function Post(props) {
 
             setHeartImage(NormalHeart);
             setNumber(prev => prev - 1);
+        }
+    };
+
+    const handleOnSavedChange = () => {
+
+        if(savedImage === SavedImg) {
+
+            setSavedImage(SavedImageFull);
+        }
+
+        if(savedImage === SavedImageFull) {
+
+            setSavedImage(SavedImg);
         }
     };
 
@@ -84,7 +99,7 @@ function Post(props) {
                     <img className="img-logo" style={{width: '32px', marginBottom: 0}} src={InstaCommentImage} />
                     <img className="img-logo" style={{width: '23px'}} src={ShareImage}/>
                 </div>
-                <img className="img-logo" style={{width: '18px', height: '23px', margin: '8px 5px'}} src={SavedImage} />
+                <img onClick={handleOnSavedChange} className="img-logo" style={{width: '18px', height: '23px', margin: '8px 5px'}} src={savedImage} />
             </section>
 
             <section>
