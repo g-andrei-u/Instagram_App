@@ -104,6 +104,7 @@ function Post(props) {
 
             <section>
                 <p style={likesStyle}>Liked by {number}</p>
+                <p style={{margin: '8px 0'}}><strong style={likesStyle}>{props.name}</strong>   {props.description}</p>
                 <p style={commentsStyle}>View all comments</p>
                 <p style={commentsStyle}>Add a comment...</p>
             </section>

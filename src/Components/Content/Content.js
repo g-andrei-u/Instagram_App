@@ -19,6 +19,7 @@ const posts = {
         name: 'YSM._.Sam',
         time: '1h',
         likes: 19,
+        description: 'new guns🤠',
         profileImage: Image25,
         mainImage: Image24
     },
@@ -27,6 +28,7 @@ const posts = {
         name: 'Gaston',
         time: '3h',
         likes: 89,
+        description: 'push-ups after hunting are always the best😎💪',
         profileImage: Image22,
         mainImage: Image23
     },
@@ -35,6 +37,7 @@ const posts = {
         name: 'Shrek',
         time: '5h',
         likes: 1999,
+        description: 'new camera🤳',
         profileImage: Image26,
         mainImage: Image27
     },
@@ -43,6 +46,7 @@ const posts = {
         name: 'Lola',
         time: '7h',
         likes: 299,
+        description: '🧠 < ❤️',
         profileImage: Image21,
         mainImage: Image20
     }
@@ -59,6 +63,7 @@ function Content(props) {
             name={posts.Sam.name}
             time={posts.Sam.time}
             likes={posts.Sam.likes}
+            description={posts.Sam.description}
             mainImg={posts.Sam.mainImage} 
             profileImg={posts.Sam.profileImage} 
             />
@@ -70,6 +75,7 @@ function Content(props) {
             name={posts.Gaston.name}
             time={posts.Gaston.time}
             likes={posts.Gaston.likes}
+            description={posts.Gaston.description}
             mainImg={posts.Gaston.mainImage} 
             profileImg={posts.Gaston.profileImage} 
             />
@@ -81,6 +87,7 @@ function Content(props) {
             name={posts.Shrek.name}
             time={posts.Shrek.time}
             likes={posts.Shrek.likes}
+            description={posts.Shrek.description}
             mainImg={posts.Shrek.mainImage} 
             profileImg={posts.Shrek.profileImage} 
             />
@@ -92,6 +99,7 @@ function Content(props) {
             name={posts.Lola.name}
             time={posts.Lola.time}
             likes={posts.Lola.likes}
+            description={posts.Lola.description}
             mainImg={posts.Lola.mainImage} 
             profileImg={posts.Lola.profileImage} 
             />
