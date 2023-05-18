@@ -78,7 +78,10 @@ function Post(props) {
 
     return (
         <>
-        <PostSettings update={props.update} />
+        <PostSettings 
+        handleOnExit={props.handleOnExit} 
+        update={props.update} 
+        />
         <div onClick={props.handleOnExit} id="post">
             <section id="first-bar">
                 <div id="inner-bar">

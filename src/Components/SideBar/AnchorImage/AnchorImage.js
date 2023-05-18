@@ -4,7 +4,6 @@ import React, { useState } from "react";
 function AnchorImage(props) {
 
     const [onHover, setOnHover] = useState(false);
-    const [onClick, setOnClick] = useState(false);
 
     const handleMouseEnter = () => {
 

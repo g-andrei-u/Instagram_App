@@ -6,7 +6,7 @@ import Tom from '../../Pictures/tom-face-sticker-india.png';
 import './UpperSide.css'
 
 
-function UpperSide() {
+function UpperSide(props) {
     return (
         <div id='UpperSide'>
             <img className="profile-picture" src={Tom} />
@@ -14,7 +14,7 @@ function UpperSide() {
                 <div className="first-line">
                     <p style={{fontWeight: '500'}}>Tom_from_Tom.and.Jerry</p>
                     <button>Edit profile</button>
-                    <img className="settings-img" src={SettingsImage} />
+                    <img className="settings-img" src={SettingsImage} onClick={props.handleOnProfileSettings} />
                 </div>
 
                 <div className="first-line">

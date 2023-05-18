@@ -29,7 +29,7 @@ function PostSettings(props) {
             <p>Copy link</p>
             <p>Embed</p>
             <p>About this account</p>
-            <p style={lastStyle}>Cancel</p>
+            <p style={lastStyle} onClick={props.handleOnExit}>Cancel</p>
         </div>
     )
 };

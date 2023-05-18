@@ -56,6 +56,8 @@ function App() {
       handleOnStory={handleOnStory}
       update={update}
       handleOnPress={handleOnPress} 
+      morePopUp={morePopUp}
+      setMorePopUp={setMorePopUp}
       />
     </div>
   );

@@ -10,7 +10,10 @@ import './ThePage.css'
 function ThePage(props) {
     return props.profileState === true ? (
         <div className='starting-page'>
-        <ProfilePage /> 
+        <ProfilePage 
+        morePopUp={props.morePopUp}
+        setMorePopUp={props.setMorePopUp}
+        /> 
         </div>) : (
         <div className='starting-page'>
             <Stories
