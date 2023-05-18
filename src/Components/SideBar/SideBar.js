@@ -35,8 +35,9 @@ function Sidebar(props) {
     <MorePopUp status={props.morePopUp} />
     <div id="side-bar" onClick={props.handleOnExit}>
         <div id="start-part">
-            <a onClick={props.handleOnProfileClose}>
-                <img src={Image1} style={{width: 115, marginTop: 30, padding: '6px 0'}} />
+            <a style={{display: "flex", alignContent: "center"}} onClick={props.handleOnProfileClose}>
+                <img src={Image1} style={{display: "inline", width: 115, marginTop: 30, padding: '6px 0'}} />
+                <p style={{display: "inline", fontSize: '10px', fontWeight: '700', marginTop: 52, marginLeft: -2, color: 'purple'}}>for cartoons</p>
             </a>
         </div>
         <div id="mid-part">
