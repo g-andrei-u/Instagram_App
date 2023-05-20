@@ -32,7 +32,9 @@ function ProfilePage(props) {
             <UppperSide
             handleOnProfileSettings={handleOnProfileSettings}
             />
-            <LowerSide />
+            <LowerSide
+            saved={props.saved}
+            />
         </div>
         </>
     )

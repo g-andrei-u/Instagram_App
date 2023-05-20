@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import RightTopCorner from '../RightTopCorner/RightTopCorner';
 import Content from '../Content/Content';
 import Stories from '../Stories/Stories';
@@ -8,9 +8,14 @@ import './ThePage.css'
 
 
 function ThePage(props) {
+
+    const [saved, setSaved] = useState(false);
+
+
     return props.profileState === true ? (
         <div className='starting-page'>
-        <ProfilePage 
+        <ProfilePage
+        saved={saved} 
         morePopUp={props.morePopUp}
         setMorePopUp={props.setMorePopUp}
         /> 
