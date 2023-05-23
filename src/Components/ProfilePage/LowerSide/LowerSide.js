@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
+import { posts } from "../../Content/Content";
+import SavedPost from "./SavedPost/SavedPost";
 import TomPost from '../../Pictures/Tom-and-Jerry.jpg';
-import Heart from '../../Pictures/full-heart-shaped-white-transparent.png';
-import Comment from '../../Pictures/full-white-comment.png';
 import Saved from '../../Pictures/saved.png';
 import Raven from '../../Pictures/Raven.png';
 import Grid from '../../Pictures/grid-post.png';
@@ -10,30 +9,17 @@ import Grid from '../../Pictures/grid-post.png';
 import './LowerSide.css';
 
 
-function LowerSide() {
+function LowerSide(props) {
 
-    const [onHover, setOnHover] = useState(false);
     const [isActive, setIsActive] = useState(false);
 
-
-    const handleOnMouseEnter = () => {setOnHover(true)};
-    const handleOnMouseLeave = () => {setOnHover(false)};
 
     const handleOnClickSaved = () => {setIsActive(true)};
     const handleOnClickPosts = () => {setIsActive(false)};
 
 
-    const hoverStyle = {
-        display: onHover === true ? 'flex' : 'none'
-    };
-
     const navStyle = {
         borderTop: isActive ? '' : '1px solid black',
-    };
-
-    const heartStyle = {
-        width: '20px', 
-        marginRight: '-4px'
     };
 
 
@@ -45,27 +31,55 @@ function LowerSide() {
             </nav>
 
             <div style={{display: isActive ? 'grid' : ''}} id="saved">
-                <div className="post">
-                    <img onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} className="post-image" src={Raven} />
-                </div>
-                <div style={hoverStyle} className="on-hover">
-                    <img style={heartStyle} src={Heart} />
-                    <p>1289</p>
-                    <img style={{width: '20px', marginRight: '-4px', marginLeft: '15px'}} src={Comment} />
-                    <p>200</p>
-                </div>
+                <SavedPost
+                position='first-position'
+                img={Raven} 
+                likes={548} 
+                comments={123}
+                show={true} 
+                />
+
+                <SavedPost
+                position='second-position'
+                img={posts.Sam.mainImage}
+                likes={posts.Sam.likes} 
+                comments={posts.Sam.comments}
+                show={props.saved1}
+                />
+
+                <SavedPost
+                position='position-tree'
+                img={posts.Gaston.mainImage}
+                likes={posts.Gaston.likes} 
+                comments={posts.Gaston.comments}
+                show={props.saved2}
+                />
+                
+                <SavedPost
+                position='position-four'
+                img={posts.Shrek.mainImage}
+                likes={posts.Shrek.likes} 
+                comments={posts.Shrek.comments}
+                show={props.saved3}
+                />
+
+                <SavedPost
+                position='position-five'
+                img={posts.Lola.mainImage}
+                likes={posts.Lola.likes} 
+                comments={posts.Lola.comments}
+                show={props.saved4}
+                />
             </div>
 
             <div style={{display: isActive ? 'none' : ''}} id="posts">
-                <div className="post">
-                    <img onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave} className="post-image" src={TomPost} />
-                </div>
-                <div style={hoverStyle} className="on-hover">
-                    <img style={heartStyle} src={Heart} />
-                    <p>298</p>
-                    <img style={{width: '20px', marginRight: '-4px', marginLeft: '15px'}} src={Comment} />
-                    <p>10</p>
-                </div>
+            <SavedPost
+                position='first-position'
+                img={TomPost}
+                likes={89} 
+                comments={13}
+                show={true}  
+                />
             </div>
         </div>
     )

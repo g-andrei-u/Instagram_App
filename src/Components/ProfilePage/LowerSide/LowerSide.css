@@ -58,27 +58,47 @@ nav img {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.post {
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
 .post-image {
     width: 310px;
     height: 310px;
     margin-right: 30px;
+    margin-left: 0px;
+    margin-bottom: 10px;
 }
 
 .on-hover {
     pointer-events: none;
-    grid-column: 1/2;
-    grid-row: 1/2;
     margin-right: 30px;
     background-color: rgba(0, 0, 0, 0.1);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.first-position {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.second-position {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.position-tree {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.position-four {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.position-five {
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
 .on-hover p {

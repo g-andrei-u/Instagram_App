@@ -9,13 +9,16 @@ import './ThePage.css'
 
 function ThePage(props) {
 
-    const [saved, setSaved] = useState(false);
+    const [saved1, setSaved1] = useState(false);
+    const [saved2, setSaved2] = useState(false);
+    const [saved3, setSaved3] = useState(false);
+    const [saved4, setSaved4] = useState(false);
 
 
     return props.profileState === true ? (
         <div className='starting-page'>
         <ProfilePage
-        saved={saved} 
+        saved1={saved1} saved2={saved2} saved3={saved3} saved4={saved4}
         morePopUp={props.morePopUp}
         setMorePopUp={props.setMorePopUp}
         /> 
@@ -30,6 +33,8 @@ function ThePage(props) {
             update={props.update}
             handleOnPress={props.handleOnPress}
             handleOnExit={props.handleOnExit} 
+            saved1={saved1} saved2={saved2} saved3={saved3} saved4={saved4}
+            setSaved1={setSaved1} setSaved2={setSaved2} setSaved3={setSaved3} setSaved4={setSaved4} 
             />
 
             <RightTopCorner

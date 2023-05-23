@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import PostSettings from "./PostSettings/PostSettings";
-
 import NormalHeart from '../Pictures/heart-shaped-instagram-transparent-image.png'
 import HeartImageRed from '../Pictures/heart-logo-red-transparent.png';
 import ShareImage from '../Pictures/messeges.png';
 import InstaCommentImage from '../Pictures/insta-comment.png';
 import SavedImg from '../Pictures/saved.png';
 import SavedImageFull from '../Pictures/saved-full.png';
-
 import './Post.css';
 
 
@@ -22,6 +20,7 @@ function Post(props) {
     const [heartImage, setHeartImage] = useState(NormalHeart);
     const [savedImage, setSavedImage] = useState(SavedImg);
     const [number, setNumber] = useState(props.likes);
+    const [saved, setSaved] = [props.saved, props.setSaved];
 
 
     const handleOnHeartChange = () => {
@@ -44,11 +43,13 @@ function Post(props) {
         if(savedImage === SavedImg) {
 
             setSavedImage(SavedImageFull);
+            setSaved(true)
         }
 
         if(savedImage === SavedImageFull) {
 
             setSavedImage(SavedImg);
+            setSaved(false)
         }
     };
 
