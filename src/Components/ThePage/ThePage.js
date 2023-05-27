@@ -5,6 +5,7 @@ import Stories from '../Stories/Stories';
 import ProfilePage from '../ProfilePage/ProfilePage';
 
 import './ThePage.css'
+import MessagesPage from '../MessagesPage/MessagesPage';
 
 
 function ThePage(props) {
@@ -15,34 +16,51 @@ function ThePage(props) {
     const [saved4, setSaved4] = useState(false);
 
 
-    return props.profileState === true ? (
-        <div className='starting-page'>
-        <ProfilePage
-        saved1={saved1} saved2={saved2} saved3={saved3} saved4={saved4}
-        morePopUp={props.morePopUp}
-        setMorePopUp={props.setMorePopUp}
-        /> 
-        </div>) : (
-        <div className='starting-page'>
-            <Stories
-            handleOnExit={props.handleOnExit}
-            handleOnStory={props.handleOnStory}
-            />
-      
-            <Content 
-            update={props.update}
-            handleOnPress={props.handleOnPress}
-            handleOnExit={props.handleOnExit} 
-            saved1={saved1} saved2={saved2} saved3={saved3} saved4={saved4}
-            setSaved1={setSaved1} setSaved2={setSaved2} setSaved3={setSaved3} setSaved4={setSaved4} 
-            />
+    if (props.profileState === true) {
+        return (
+            <div className='starting-page'>
+                <ProfilePage
+                saved1={saved1} saved2={saved2} saved3={saved3} saved4={saved4}
+                morePopUp={props.morePopUp} setMorePopUp={props.setMorePopUp}
+                image={props.image}
+                /> 
+            </div>
+        )
+    } 
 
-            <RightTopCorner
-            handleOnExit={props.handleOnExit} 
-            id='right-top' 
-            />
-        </div>
-    )
+    else if (props.messagesPage === true) {
+        return (
+            <div className='starting-page'>
+                <MessagesPage
+                messagesPage={props.messagesPage} 
+                />
+            </div>
+        )
+    }
+    
+    else {
+        return (
+            <div className='starting-page'>
+                <Stories
+                handleOnExit={props.handleOnExit}
+                handleOnStory={props.handleOnStory}
+                />
+      
+                <Content 
+                update={props.update}
+                handleOnPress={props.handleOnPress}
+                handleOnExit={props.handleOnExit} 
+                saved1={saved1} saved2={saved2} saved3={saved3} saved4={saved4}
+                setSaved1={setSaved1} setSaved2={setSaved2} setSaved3={setSaved3} setSaved4={setSaved4} 
+                />
+
+                <RightTopCorner
+                handleOnExit={props.handleOnExit} 
+                id='right-top' 
+               />
+            </div>
+        )
+    }
 };
 
 

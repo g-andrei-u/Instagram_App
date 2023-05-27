@@ -1,0 +1,78 @@
+.Page {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F3F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-page {
+    background-color: white;
+    width: 70%;
+    height: 92%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.people {
+    grid-column: 1/2;
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.my-user {
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.accounts {
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+}
+
+.account-messages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 5px;
+}
+
+.profile-pic-messages {
+    display: 'inline';
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border: 0px;
+    border-radius: 60%;
+    border: 1px solid rgb(191, 191, 191);
+}
+
+.inner-profile h5 {
+    margin: 0;
+}
+
+.inner-profile p {
+    opacity: 0.5;
+    margin: 0;
+    font-size: 13px;
+}
+
+.messages {
+    grid-column: 2/3;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}

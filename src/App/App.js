@@ -4,6 +4,7 @@ import StoryPage from '../Components/Stories/StoryPage/StoryPage';
 import ThePage from '../Components/ThePage/ThePage';
 
 import './App.css';
+import CreatePopUp from '../Components/SideBar/CreatePopUp/CreatePopUp';
 
 function App() {
 
@@ -11,14 +12,18 @@ function App() {
   const [morePopUp, setMorePopUp] = useState(false);
   const [isStoryActive, setIsStoryActive] = useState(false);
   const [profileState, setProfileState] = useState(false);
+  const [messagesPage, setMessagesPage] = useState(false);
+  const [createPopUp, setCreatePopUp] = useState(false);
+  const [image, setImage] = useState(null);
 
 
-  const handleOnProfileOpen = () => { if(profileState === false)  {setProfileState(true)} };
-  const handleOnProfileClose = () => { if(profileState === true)  {setProfileState(false)} };
+  const handleOnProfileOpen = () => { if(profileState === false)  {setProfileState(true); setMessagesPage(false)} };
+  const handleOnMessagesOpen = () => { if(messagesPage === false)  {setMessagesPage(true); setProfileState(false)} };
+  const handleOnProfileClose = () => { if(profileState === true || messagesPage === true)  {setProfileState(false); setMessagesPage(false)} };
 
   const handleOnStory = () => { isStoryActive === false ? setIsStoryActive(true) : setIsStoryActive(false) };
 
-  const handleOnPress = () => { update === false ? setUpdate(true) : setUpdate(false) };
+  const handleOnUpdate = () => { update === false ? setUpdate(true) : setUpdate(false) };
 
   const handleOnMoreOpen = () => { morePopUp === false ? setMorePopUp(true) : setMorePopUp(false) };
   
@@ -40,13 +45,11 @@ function App() {
   ) : (
     <div className="App">
       <Sidebar
-      profileState={profileState}
-      handleOnProfileClose={handleOnProfileClose}
-      handleOnProfileOpen={handleOnProfileOpen}
-      morePopUp={morePopUp}
-      handleOnMoreOpen={handleOnMoreOpen} 
+      profileState={profileState} handleOnProfileClose={handleOnProfileClose} handleOnProfileOpen={handleOnProfileOpen}
+      morePopUp={morePopUp} handleOnMoreOpen={handleOnMoreOpen} 
       handleOnExit={handleOnExit}
-      id='side-bar' 
+      createPopUp={createPopUp} setCreatePopUp={setCreatePopUp}
+      handleOnMessagesOpen={handleOnMessagesOpen}
       />
 
       <ThePage
@@ -54,10 +57,16 @@ function App() {
       handleOnProfileOpen={handleOnProfileOpen}
       handleOnExit={handleOnExit}
       handleOnStory={handleOnStory}
-      update={update}
-      handleOnPress={handleOnPress} 
-      morePopUp={morePopUp}
-      setMorePopUp={setMorePopUp}
+      update={update} handleOnPress={handleOnUpdate} 
+      morePopUp={morePopUp} setMorePopUp={setMorePopUp}
+      image={image}
+      messagesPage={messagesPage} setMessagesPage={setMessagesPage}
+      />
+
+      <CreatePopUp 
+      createPopUp={createPopUp} 
+      setCreatePopUp={setCreatePopUp}
+      image={image} setImage={setImage}
       />
     </div>
   );

@@ -23,6 +23,7 @@ function AnchorImage(props) {
 
     const anchorStyle = {
         width: '90%',
+        height: '40px',
         display: 'flex', 
         margin: '6px 0', 
         alignItems: 'center',

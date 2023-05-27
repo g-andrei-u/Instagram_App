@@ -34,6 +34,7 @@ function ProfilePage(props) {
             />
             <LowerSide
             saved1={props.saved1} saved2={props.saved2} saved3={props.saved3} saved4={props.saved4}
+            image={props.image}
             />
         </div>
         </>

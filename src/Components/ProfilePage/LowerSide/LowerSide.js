@@ -80,6 +80,14 @@ function LowerSide(props) {
                 comments={13}
                 show={true}  
                 />
+
+            <SavedPost
+                position='second-position'
+                img={props.image}
+                likes={0} 
+                comments={0}
+                show={props.image ? true : false}  
+                />
             </div>
         </div>
     )
