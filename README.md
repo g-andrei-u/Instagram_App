@@ -1,3 +1,3 @@
 # Custom Instagram Clone
 
-This project was bootstrapped with [Create React App].
+Here it is the deployed project on netlify: https://customclone.netlify.app/
