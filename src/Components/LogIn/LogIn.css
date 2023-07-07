@@ -1,0 +1,44 @@
+.log-in-page {
+    grid-column: 1/3;
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.log-in {
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    padding: 20px 55px;
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 2px;
+    margin-top: 140px;
+}
+
+.log-in img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.log-in input {
+    background-color: rgb(240, 240, 240);
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px; 
+    margin: 10px;
+}
+
+.log-in button {
+    cursor: pointer;
+    background-color: #77A7FF;
+    font-size: 16px;
+    padding: 10px;
+    border: 0px;
+    border-radius: 5px;
+    margin: 10px;
+}
